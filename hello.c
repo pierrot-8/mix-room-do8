@@ -7,8 +7,4 @@ int main()
 		printf("Hello World\n");
 	}
 	return 0;
-
 }
-
-
-"hello.c" 10L,130C written

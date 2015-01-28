@@ -1,0 +1,52 @@
+float x1,y1,x2,y2,r1,r2;
+float vx1,vy1;
+
+void setup(){
+  size(500,500);
+  x1=(width/2);
+  y1=(height/2);
+  r1=50;
+  
+  x2=(width/2);
+  y2=(height/2);
+  r2=350;
+  
+  
+}
+
+void draw(){
+  background(255);
+  
+  ellipse(x2,y2,r2,r2);
+  ellipse(x1,y1,r1,r1);
+ 
+}
+
+void mousePressed(){
+  
+  vx1=x1-mouseX;
+  vy1=y1-mouseY;
+  
+  if(vx1*vx1+vy1*vy1<r1*r1)
+  {
+    fill(255,120,180);
+  }
+  if(x2-x1>200||y2-y1>200)
+  {
+    fill(0,255,0);
+  }
+  
+}
+
+void mouseDragged(){
+  if(vx1*vx1+vy1*vy1<r1*r1)
+  {
+    x1=mouseX+vx1;
+    y1=mouseY+vy1;
+  }
+}
+
+void mouseReleased()
+{
+  fill(0,0,0);
+}

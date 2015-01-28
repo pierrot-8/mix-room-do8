@@ -1,0 +1,25 @@
+int x = 0, y = 211;
+int vx = 5, vy = 5;
+
+void setup() {
+  size(500, 500);
+}
+
+void draw() {
+  background(255, 255, 255);
+  strokeWeight(3);
+  ellipse(x, y, 20, 20);
+  x += vx; y += vy;
+  if (x < 0 || width < x) {
+    vx *= -1;
+    
+  }
+  if ( height < y) {
+    vy *= -1;
+    x+=15;
+  }
+  if( y < 0 ){
+    vy*=-1;
+    x-=10;
+  }
+}
